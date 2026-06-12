@@ -6,7 +6,7 @@
 <title>Gona Capital Partners — Asset Management, Harare</title>
 <meta name="description" content="Gona Capital Partners is a Zimbabwean asset management firm managing proprietary and client funds across equities, bonds, money markets, property and unit trusts.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -23,20 +23,20 @@
   --text-mid:#556070;
   --text-lt:#8899A8;
   --white:#FFFFFF;
-  --ff-serif:'Playfair Display',Georgia,serif;
-  --ff-sans:'Inter',system-ui,sans-serif;
+  --ff-serif:'Cormorant Garamond','Libre Baskerville',Georgia,serif;
+  --ff-sans:'Source Sans 3','Segoe UI',sans-serif;
   --pad:72px;
   --trans:0.24s ease;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--ff-sans);font-size:15px;line-height:1.7;color:var(--text-dark);background:var(--white);-webkit-font-smoothing:antialiased}
+body{font-family:var(--ff-sans);font-size:15px;line-height:1.75;color:var(--text-dark);background:var(--white);-webkit-font-smoothing:antialiased;font-feature-settings:"kern" 1,"liga" 1}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 
 /* ── TYPOGRAPHY HELPERS ── */
 .overline{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px}
 .overline::before{content:'';display:block;width:20px;height:1px;background:var(--gold);flex-shrink:0}
-.display{font-family:var(--ff-serif);font-size:clamp(36px,4.5vw,60px);line-height:1.06;color:var(--navy);letter-spacing:-.01em}
+.display{font-family:var(--ff-serif);font-size:clamp(36px,4.5vw,60px);line-height:1.08;color:var(--navy);letter-spacing:.01em;font-weight:500}
 .display em{font-style:italic;color:var(--gold)}
 .display.light{color:var(--white)}
 .display.light em{color:var(--gold-lt)}
@@ -89,7 +89,7 @@ a{color:inherit;text-decoration:none}
 }
 .nav-logo-row{display:flex;align-items:center;gap:10px;overflow:visible}
 .nav-logo-copy{display:flex;flex-direction:column;gap:3px;line-height:1.1}
-.nav-logo-name{font-family:var(--ff-serif);font-size:21px;color:var(--navy);white-space:nowrap;transition:color .32s ease}
+.nav-logo-name{font-family:var(--ff-serif);font-size:22px;font-weight:600;color:var(--navy);white-space:nowrap;transition:color .32s ease;letter-spacing:.02em}
 .nav-logo-name em{font-style:italic;color:var(--gold);transition:color .32s ease}
 .nav-logo-mark{height:48px;width:auto;display:block;flex-shrink:0;object-fit:contain;transition:height .32s ease,filter .32s ease}
 .nav.scrolled .nav-logo-mark{height:52px}
@@ -170,7 +170,7 @@ a{color:inherit;text-decoration:none}
 .hero-title{display:flex;flex-direction:column;gap:6px;margin-bottom:0}
 .hero-title-line{
   font-family:var(--ff-serif);font-size:clamp(42px,5.5vw,72px);
-  line-height:1;color:var(--white);letter-spacing:-.02em;
+  line-height:1.02;color:var(--white);letter-spacing:.015em;font-weight:500;
 }
 .hero-title-line em{font-style:italic;color:var(--gold-lt)}
 .hero-title-accent{font-size:clamp(48px,6.5vw,88px);line-height:.95;margin-top:2px}

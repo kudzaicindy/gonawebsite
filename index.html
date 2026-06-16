@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gona Capital Partners — Asset Management, Harare</title>
-<meta name="description" content="Gona Capital Partners is a Zimbabwean asset management firm managing proprietary and client funds across equities, bonds, money markets, property and unit trusts.">
+<title>Gona Capital Partners — Results-Driven Investing, Harare</title>
+<meta name="description" content="Gona Capital Partners is a Zimbabwean investment firm deploying institutional capital across infrastructure, alternatives, listed markets and specialist strategies. SECZ-aligned.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -23,12 +23,12 @@
   --text-mid:#556070;
   --text-lt:#8899A8;
   --white:#FFFFFF;
-  --ff-serif:'Cormorant Garamond','Libre Baskerville',Georgia,serif;
-  --ff-sans:'Source Sans 3','Segoe UI',sans-serif;
+  --ff-serif:'Libre Baskerville',Georgia,'Times New Roman',serif;
+  --ff-sans:'Libre Franklin','Segoe UI',sans-serif;
   --pad:72px;
   --trans:0.24s ease;
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{font-family:var(--ff-sans);font-size:15px;line-height:1.75;color:var(--text-dark);background:var(--white);-webkit-font-smoothing:antialiased;font-feature-settings:"kern" 1,"liga" 1}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
@@ -36,7 +36,7 @@ a{color:inherit;text-decoration:none}
 /* ── TYPOGRAPHY HELPERS ── */
 .overline{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:10px}
 .overline::before{content:'';display:block;width:20px;height:1px;background:var(--gold);flex-shrink:0}
-.display{font-family:var(--ff-serif);font-size:clamp(36px,4.5vw,60px);line-height:1.08;color:var(--navy);letter-spacing:.01em;font-weight:500}
+.display{font-family:var(--ff-serif);font-size:clamp(36px,4.5vw,60px);line-height:1.12;color:var(--navy);letter-spacing:.02em;font-weight:700}
 .display em{font-style:italic;color:var(--gold)}
 .display.light{color:var(--white)}
 .display.light em{color:var(--gold-lt)}
@@ -44,14 +44,14 @@ a{color:inherit;text-decoration:none}
 .body-copy p+p{margin-top:14px}
 
 /* ── BUTTONS ── */
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-sans);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:13px 28px;cursor:pointer;border:none;white-space:nowrap;transition:all var(--trans)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--ff-sans);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:13px 28px;cursor:pointer;border:none;white-space:nowrap;transition:all var(--trans)}
 .btn svg{flex-shrink:0;transition:transform var(--trans)}
 .btn:hover svg{transform:translateX(3px)}
 .btn-gold{background:var(--gold);color:var(--white)}
 .btn-gold:hover{background:var(--gold-lt)}
 .btn-navy{background:var(--navy);color:var(--white)}
 .btn-navy:hover{background:var(--navy-3)}
-.btn-outline{background:transparent;color:var(--gold-lt);border:1px solid rgba(184,148,58,.4)}
+.btn-outline{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.55);text-shadow:0 1px 6px rgba(0,0,0,.25)}
 .btn-outline:hover{background:var(--gold);color:var(--white);border-color:var(--gold)}
 
 /* ── NAV ── */
@@ -82,23 +82,35 @@ a{color:inherit;text-decoration:none}
   border-left-color:transparent;
 }
 .nav:not(.scrolled) .nav-brand{
-  background:rgba(255,255,255,.97);
-  padding:10px 18px 10px 14px;
-  border-left-color:var(--gold);
-  box-shadow:0 4px 24px rgba(11,24,38,.22);
+  background:transparent;
+  padding:6px 0;
+  border-left-color:transparent;
+  box-shadow:none;
 }
+.nav:not(.scrolled) .nav-logo-full{
+  height:62px;
+  filter:
+    drop-shadow(-1px 0 0 rgba(255,255,255,.95))
+    drop-shadow(1px 0 0 rgba(255,255,255,.95))
+    drop-shadow(0 -1px 0 rgba(255,255,255,.95))
+    drop-shadow(0 1px 0 rgba(255,255,255,.95))
+    drop-shadow(0 0 10px rgba(255,255,255,.4))
+    drop-shadow(0 4px 16px rgba(0,0,0,.55));
+}
+.nav.scrolled .nav-logo-full{height:64px;filter:none}
 .nav-logo-row{display:flex;align-items:center;gap:10px;overflow:visible}
 .nav-logo-copy{display:flex;flex-direction:column;gap:3px;line-height:1.1}
 .nav-logo-name{font-family:var(--ff-serif);font-size:22px;font-weight:600;color:var(--navy);white-space:nowrap;transition:color .32s ease;letter-spacing:.02em}
 .nav-logo-name em{font-style:italic;color:var(--gold);transition:color .32s ease}
 .nav-logo-mark{height:48px;width:auto;display:block;flex-shrink:0;object-fit:contain;transition:height .32s ease,filter .32s ease}
+.nav-logo-full{height:58px;width:auto;display:block;flex-shrink:0;object-fit:contain;transition:height .32s ease,filter .32s ease}
 .nav.scrolled .nav-logo-mark{height:52px}
 .nav-logo-tag{
   font-family:var(--ff-sans);font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;
   color:var(--text-lt);transition:color .32s ease,opacity .32s ease;
 }
 .nav-links{display:flex;align-items:center;gap:0}
-.nav-links a{font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-mid);padding:8px 18px;position:relative;transition:color .32s ease}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--text-mid);padding:8px 18px;position:relative;transition:color .32s ease}
 .nav-links a::after{content:'';position:absolute;bottom:-1px;left:18px;right:18px;height:2px;background:var(--gold);transform:scaleX(0);transition:transform var(--trans);transform-origin:left}
 .nav-links a:hover,.nav-links a.active{color:var(--navy)}
 .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
@@ -127,17 +139,17 @@ a{color:inherit;text-decoration:none}
 .hero{
   min-height:100vh;
   display:flex;align-items:flex-end;
-  background:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=85&auto=format&fit=crop') center 35%/cover no-repeat;
+  background:url('https://images.unsplash.com/photo-1721012970985-3ca71fe3877c?w=1800&q=85&auto=format&fit=crop') center 40%/cover no-repeat;
   position:relative;overflow:hidden;
 }
 .hero-overlay{
   position:absolute;inset:0;z-index:1;
   background:
-    linear-gradient(90deg,rgba(11,24,38,.88) 0%,rgba(11,24,38,.72) 38%,rgba(11,24,38,.52) 62%,rgba(11,24,38,.68) 100%);
+    linear-gradient(90deg,rgba(11,24,38,.94) 0%,rgba(11,24,38,.86) 42%,rgba(11,24,38,.62) 68%,rgba(11,24,38,.78) 100%);
 }
 .hero-overlay-vignette{
   position:absolute;inset:0;z-index:1;
-  background:radial-gradient(ellipse at 75% 50%,transparent 0%,rgba(11,24,38,.4) 100%);
+  background:radial-gradient(ellipse at 30% 55%,rgba(11,24,38,.25) 0%,rgba(11,24,38,.55) 100%);
   pointer-events:none;
 }
 .hero-overlay-pattern{
@@ -156,28 +168,33 @@ a{color:inherit;text-decoration:none}
 }
 .hero-content{
   max-width:100%;
-  background:transparent;
+  background:rgba(11,24,38,.42);
   border:none;
   border-left:3px solid var(--gold);
-  backdrop-filter:none;
-  padding:0 0 0 32px;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  padding:28px 32px 32px;
+  box-shadow:0 12px 48px rgba(0,0,0,.28);
 }
 .hero-eyebrow{
   font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
   color:var(--gold-lt);margin-bottom:18px;
+  text-shadow:0 1px 8px rgba(0,0,0,.45);
 }
 .hero-label{display:none}
 .hero-title{display:flex;flex-direction:column;gap:6px;margin-bottom:0}
 .hero-title-line{
   font-family:var(--ff-serif);font-size:clamp(42px,5.5vw,72px);
-  line-height:1.02;color:var(--white);letter-spacing:.015em;font-weight:500;
+  line-height:1.05;color:var(--white);letter-spacing:.02em;font-weight:700;
+  text-shadow:0 2px 20px rgba(0,0,0,.5),0 1px 3px rgba(0,0,0,.35);
 }
-.hero-title-line em{font-style:italic;color:var(--gold-lt)}
+.hero-title-line em{font-style:italic;color:var(--gold-lt);text-shadow:0 2px 16px rgba(0,0,0,.45)}
 .hero-title-accent{font-size:clamp(48px,6.5vw,88px);line-height:.95;margin-top:2px}
 .hero-rule{width:48px;height:2px;background:var(--gold);margin:24px 0}
 .hero-sub{
-  font-size:15px;font-weight:400;color:rgba(255,255,255,.78);
-  line-height:1.85;margin-bottom:24px;max-width:520px;
+  font-size:16px;font-weight:400;color:rgba(255,255,255,.94);
+  line-height:1.85;margin-bottom:28px;max-width:520px;
+  text-shadow:0 1px 14px rgba(0,0,0,.4);
 }
 .hero-sub strong{color:var(--white);font-weight:600}
 .hero-points{
@@ -258,9 +275,9 @@ a{color:inherit;text-decoration:none}
 .stat-lbl{font-size:10px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35)}
 
 /* ── ABOUT ── */
-.about{background:var(--cream);padding:100px var(--pad)}
-.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.about-photos{position:relative;height:520px;min-height:420px}
+.about{background:var(--cream);padding:72px var(--pad);min-height:100vh;display:flex;align-items:center;scroll-margin-top:80px}
+.about-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;width:100%;max-width:1280px;margin:0 auto}
+.about-photos{position:relative;height:clamp(340px,52vh,440px);min-height:0}
 .ap-main{
   position:absolute;top:0;left:0;width:78%;height:78%;
   background:url('https://images.unsplash.com/photo-1600880292203-75762f3740b6?w=900&q=80&auto=format&fit=crop') center/cover no-repeat;
@@ -280,12 +297,55 @@ a{color:inherit;text-decoration:none}
 }
 .ap-badge-n{font-family:var(--ff-serif);font-size:42px;line-height:1;color:var(--gold-lt)}
 .ap-badge-l{font-size:8px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:4px;line-height:1.4}
-.about-copy .overline{margin-bottom:18px}
-.about-copy .display{margin-bottom:24px}
-.about-copy .title-rule{width:48px;height:3px;background:var(--gold);margin:0 0 24px}
-.about-copy .body-copy{margin-bottom:28px}
+.about-copy .overline{margin-bottom:12px}
+.about-copy .display{font-size:clamp(32px,3.6vw,48px);margin-bottom:16px}
+.about-copy .title-rule{width:48px;height:3px;background:var(--gold);margin:0 0 16px}
+.about-copy .body-copy{margin-bottom:18px;font-size:14px;line-height:1.72}
+.about-copy .body-copy p+p{margin-top:10px}
+.about-points{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 20px;padding:16px 0 0;border-top:1px solid var(--rule)}
+.about-points li{padding:12px 14px;background:var(--white);border:1px solid var(--rule)}
+.about-points strong{display:block;font-size:11px;font-weight:600;color:var(--navy);margin-bottom:4px;letter-spacing:.04em;text-transform:uppercase}
+.about-points span{display:block;font-size:12px;color:var(--text-mid);line-height:1.55}
+.about-points li::before{display:none}
 .btn-slant{background:var(--navy);color:var(--white);clip-path:polygon(0 0,calc(100% - 16px) 0,100% 100%,0 100%);padding-right:32px}
 .btn-slant:hover{background:var(--navy-3)}
+
+/* ── MANDATE TABS ── */
+.mandate-section{background:var(--white);padding:100px var(--pad)}
+.mandate-tabs{display:flex;justify-content:center;gap:0;margin:40px 0 48px;border:1px solid var(--rule);max-width:900px;margin-left:auto;margin-right:auto}
+.mandate-tab{
+  flex:1;padding:18px 24px;font-family:var(--ff-sans);font-size:11px;font-weight:600;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--text-mid);background:var(--white);
+  border:none;border-right:1px solid var(--rule);cursor:pointer;transition:all var(--trans);
+}
+.mandate-tab:last-child{border-right:none}
+.mandate-tab:hover{color:var(--navy);background:var(--cream)}
+.mandate-tab.active{background:var(--navy);color:var(--white)}
+.mandate-panel{display:none;animation:mandateFade .35s ease}
+.mandate-panel.active{display:block}
+@keyframes mandateFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.mandate-panel-intro{font-size:14px;color:var(--text-mid);text-align:center;max-width:560px;margin:0 auto 40px;line-height:1.75}
+.mandate-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.mandate-cards.cols-4{grid-template-columns:repeat(4,1fr)}
+.mandate-card{border:1px solid var(--rule);overflow:hidden;transition:box-shadow var(--trans),border-color var(--trans)}
+.mandate-card:hover{box-shadow:0 12px 40px rgba(11,24,38,.1);border-color:rgba(184,148,58,.4)}
+.mandate-card-img{height:200px;background-size:cover;background-position:center}
+.mandate-card-body{padding:22px 24px 28px}
+.mandate-card-body h3{font-family:var(--ff-serif);font-size:19px;color:var(--navy);margin-bottom:8px}
+.mandate-card-body p{font-size:13px;color:var(--text-mid);line-height:1.75}
+
+/* ── TEAM ── */
+.team{background:var(--ivory);padding:100px var(--pad);border-top:1px solid var(--rule)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:48px}
+.team-card{background:var(--white);border:1px solid var(--rule);overflow:hidden;transition:box-shadow var(--trans)}
+.team-card:hover{box-shadow:0 12px 40px rgba(11,24,38,.08)}
+.team-photo{height:280px;background:var(--navy-2);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.team-photo span{font-family:var(--ff-serif);font-size:48px;color:rgba(184,148,58,.35);letter-spacing:.05em}
+.team-photo img{width:100%;height:100%;object-fit:cover}
+.team-body{padding:24px 22px 28px}
+.team-name{font-family:var(--ff-serif);font-size:20px;color:var(--navy);margin-bottom:4px}
+.team-role{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.team-bio{font-size:13px;color:var(--text-mid);line-height:1.75}
 
 /* ── FEATURE CARDS ── */
 .features{background:var(--white);padding:100px var(--pad)}
@@ -382,6 +442,43 @@ a{color:inherit;text-decoration:none}
 .asset-name{font-family:var(--ff-serif);font-size:17px;color:var(--navy);margin-bottom:5px}
 .asset-desc{font-size:12.5px;color:var(--text-lt);line-height:1.7}
 
+/* ── MANDATE GROUPS ── */
+.mandate-block{margin-bottom:56px}
+.mandate-block:last-child{margin-bottom:0}
+.mandate-block-title{font-family:var(--ff-serif);font-size:22px;color:var(--navy);margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid var(--rule);text-align:center}
+.asset-grid-3{grid-template-columns:repeat(3,1fr)}
+.asset-grid-4{grid-template-columns:repeat(4,1fr)}
+
+/* ── DIGITAL DASHBOARD ── */
+.digital-section{background:var(--ivory);padding:100px var(--pad)}
+.digital-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.digital-features{display:flex;flex-direction:column;gap:28px}
+.digital-feat{padding-left:20px;border-left:2px solid var(--gold)}
+.digital-feat h3{font-family:var(--ff-serif);font-size:20px;color:var(--navy);margin-bottom:6px}
+.digital-feat p{font-size:13.5px;color:var(--text-mid);line-height:1.75}
+.dash-panel{background:var(--navy);padding:32px;border:1px solid rgba(184,148,58,.25);box-shadow:0 20px 60px rgba(11,24,38,.2)}
+.dash-label{font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:6px}
+.dash-nav{font-family:var(--ff-serif);font-size:42px;color:var(--white);line-height:1;margin-bottom:4px}
+.dash-ytd{font-size:13px;color:var(--gold-lt);margin-bottom:28px}
+.dash-alloc{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.dash-row{display:grid;grid-template-columns:1fr 48px;gap:12px;align-items:center}
+.dash-row span{font-size:11px;color:rgba(255,255,255,.55);letter-spacing:.04em}
+.dash-row strong{font-size:12px;color:var(--white);text-align:right}
+.dash-bar{grid-column:1/-1;height:4px;background:rgba(255,255,255,.08);position:relative}
+.dash-bar i{position:absolute;left:0;top:0;height:100%;background:var(--gold)}
+.dash-bar i.eq{width:42%}
+.dash-bar i.alt{width:38%}
+.dash-bar i.fi{width:20%}
+.dash-exposure{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
+.dash-exp{text-align:center}
+.dash-exp strong{display:block;font-family:var(--ff-serif);font-size:28px;color:var(--gold-lt);line-height:1}
+.dash-exp span{font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:4px;display:block}
+
+/* ── DISCLAIMER ── */
+.footer-disclaimer{padding:32px var(--pad) 0;position:relative;z-index:1;border-top:1px solid rgba(255,255,255,.08)}
+.footer-disclaimer h4{font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:12px}
+.footer-disclaimer p{font-size:11.5px;color:rgba(255,255,255,.32);line-height:1.8;max-width:900px}
+
 /* ── INSIGHTS ── */
 .insights{background:var(--white);padding:100px var(--pad)}
 .insights-hd{text-align:center;margin-bottom:56px}
@@ -465,11 +562,11 @@ footer::before{
 .footer-logo-wrap{
   display:inline-block;
   background:var(--cream);
-  padding:20px 24px;
+  padding:16px 22px;
   border-left:3px solid var(--gold);
   box-shadow:0 8px 32px rgba(0,0,0,.25);
 }
-.footer-logo{height:120px;width:auto;display:block}
+.footer-logo{height:120px;width:auto;max-width:340px;display:block;object-fit:contain}
 .footer-tagline{font-size:13px;color:rgba(255,255,255,.38);line-height:1.7;max-width:270px;margin-bottom:22px}
 .footer-socials{display:flex;gap:8px}
 .fsoc{width:34px;height:34px;border:1px solid rgba(184,148,58,.35);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--gold-lt);transition:background var(--trans),color var(--trans)}
@@ -519,17 +616,25 @@ footer::before{
   .hero-title-accent{font-size:clamp(40px,10vw,56px)}
   .icon-stats-grid{grid-template-columns:1fr 1fr;gap:28px}
   .about-inner,.contact-inner,.process{grid-template-columns:1fr}
-  .about-photos{height:380px;margin-bottom:20px}
+  .about{min-height:auto;padding:56px var(--pad)}
+  .about-photos{height:300px;margin-bottom:12px}
+  .about-points{grid-template-columns:1fr}
   .process-photo{height:320px}
   .process-photo::after{display:none}
   .process-panel::before{display:none}
   .process-panel{padding:56px var(--pad)}
-  .feature-grid{grid-template-columns:1fr}
+  .mandate-tabs{flex-direction:column}
+  .mandate-tab{border-right:none;border-bottom:1px solid var(--rule)}
+  .mandate-tab:last-child{border-bottom:none}
+  .mandate-cards,.mandate-cards.cols-4{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
   .modules-grid{grid-template-columns:1fr 1fr}
   .promo{margin:0 var(--pad)}
   .promo-inner{grid-template-columns:1fr;padding:48px 32px}
   .promo-visual{height:200px;transform:none}
-  .asset-grid{grid-template-columns:1fr 1fr}
+  .asset-grid-4{grid-template-columns:1fr 1fr}
+  .digital-inner{grid-template-columns:1fr}
+  .dash-panel{margin-top:32px}
   .asset-col{border-bottom:1px solid var(--rule)}
   .blog-grid{grid-template-columns:1fr}
   .stats-band{grid-template-columns:1fr 1fr}
@@ -541,8 +646,9 @@ footer::before{
   :root{--pad:20px}
   .icon-stats-grid{grid-template-columns:1fr}
   .modules-grid{grid-template-columns:1fr}
+  .asset-grid,.asset-grid-3,.asset-grid-4{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
-  .hero-title{font-size:52px}
+  .team-grid{grid-template-columns:1fr}
   .stats-band{grid-template-columns:1fr 1fr}
 }
 </style>
@@ -553,18 +659,15 @@ footer::before{
 <nav class="nav" id="nav">
   <a href="#home" class="nav-brand" aria-label="Gona Capital Partners">
     <div class="nav-logo-row">
-      <img src="logo-emblem.png" alt="" class="nav-logo-mark" aria-hidden="true">
-      <div class="nav-logo-copy">
-        <span class="nav-logo-name">Gona <em>Capital</em> Partners</span>
-        <span class="nav-logo-tag">Asset Management</span>
-      </div>
+      <img src="logo-gona.png" alt="Gona Capital Partners" class="nav-logo-full">
     </div>
   </a>
   <div class="nav-links">
     <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#process">Process</a>
+    <a href="#about">Who We Are</a>
+    <a href="#services">Mandate</a>
+    <a href="#team">Team</a>
+    <a href="#process">Governance</a>
     <a href="#insights">Insights</a>
   </div>
   <div class="nav-right">
@@ -576,9 +679,10 @@ footer::before{
 </nav>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#process">Process</a>
+  <a href="#about">Who We Are</a>
+  <a href="#services">Mandate</a>
+  <a href="#team">Team</a>
+  <a href="#process">Governance</a>
   <a href="#insights">Insights</a>
   <a href="#contact">Contact</a>
 </div>
@@ -591,66 +695,26 @@ footer::before{
   <div class="hero-overlay-btm"></div>
   <div class="hero-inner">
     <div class="hero-content">
-      <p class="hero-eyebrow reveal">Proprietary &amp; Client Fund Management</p>
+      <p class="hero-eyebrow reveal">Regulated context: SECZ-aligned · Zimbabwe</p>
       <h1 class="hero-title reveal">
-        <span class="hero-title-line">Capital deployed</span>
-        <span class="hero-title-line hero-title-accent">with <em>purpose.</em></span>
+        <span class="hero-title-line">Results-Driven</span>
+        <span class="hero-title-line hero-title-accent"><em>Investing.</em></span>
       </h1>
       <div class="hero-rule reveal"></div>
-      <p class="hero-sub reveal">We manage proprietary and client funds across <strong>five asset classes</strong> — delivering consistent, risk-adjusted returns with institutional-grade discipline, transparency, and reporting.</p>
-      <ul class="hero-points reveal">
-        <li>Real-time visibility across every portfolio and mandate</li>
-        <li>Double-entry controls with maker-checker approvals</li>
-        <li>Consolidated reporting exportable to Excel or PDF</li>
-      </ul>
-      <div class="hero-metrics reveal">
-        <div class="hs-row"><div class="hs-val"><span id="h1">0</span></div><div class="hs-lbl">Asset Classes</div></div>
-        <div class="hs-row"><div class="hs-val"><span id="h2">0</span></div><div class="hs-lbl">Core Modules</div></div>
-        <div class="hs-row"><div class="hs-val"><span id="h3">0</span><sup style="font-size:16px;color:var(--gold-lt)">%</sup></div><div class="hs-lbl">Audit Coverage</div></div>
-      </div>
+      <p class="hero-sub reveal">An investment firm bridging institutional capital with <strong>high-alpha infrastructure</strong> and specialist alternatives — deploying capital, not just managing mandates on paper.</p>
       <div class="hero-actions reveal">
-        <a href="#contact" class="btn btn-gold">Schedule a Consultation <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <a href="#about" class="btn btn-outline">Our Mandate <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#services" class="btn btn-gold">Our Mandate <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#contact" class="btn btn-outline">Partner with Us <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </div>
   <div class="hero-strip">
-    <div class="strip-pill"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Equities</div>
-    <div class="strip-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Money Market</div>
-    <div class="strip-pill"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>Property</div>
-    <div class="strip-pill"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Bonds &amp; Trusts</div>
+    <div class="strip-pill"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg>Infrastructure</div>
+    <div class="strip-pill"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>Alternatives</div>
+    <div class="strip-pill"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Listed Markets</div>
+    <div class="strip-pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Advisory</div>
   </div>
 </section>
-
-<!-- ICON STATS -->
-<section class="icon-stats geo-bg">
-  <div class="icon-stats-grid">
-    <div class="icon-stat reveal">
-      <svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-      <p><strong>Five Asset Classes</strong> — equities, money markets, bonds, property, and unit trusts under one consolidated mandate.</p>
-    </div>
-    <div class="icon-stat reveal d1">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <p><strong>Real-Time Visibility</strong> of all investments managed by asset managers across every portfolio.</p>
-    </div>
-    <div class="icon-stat reveal d2">
-      <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-      <p><strong>Four Core Modules</strong> — client onboarding, portfolio management, reporting, and administration.</p>
-    </div>
-    <div class="icon-stat reveal d3">
-      <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      <p><strong>Role-Based Access</strong> for Super Admin, Fund Manager, Analyst, and Read-Only stakeholders.</p>
-    </div>
-  </div>
-</section>
-
-<!-- STATS BAND -->
-<div class="stats-band">
-  <div class="stat-item reveal" data-bg="01"><div class="stat-val"><span id="t1">0</span></div><div class="stat-lbl">Asset Classes</div></div>
-  <div class="stat-item reveal d1" data-bg="02"><div class="stat-val"><span id="t2">0</span></div><div class="stat-lbl">Core Modules</div></div>
-  <div class="stat-item reveal d2" data-bg="03"><div class="stat-val"><span id="t3">0</span><sup>+</sup></div><div class="stat-lbl">User Roles</div></div>
-  <div class="stat-item reveal d3" data-bg="04"><div class="stat-val"><span id="t4">0</span><sup>%</sup></div><div class="stat-lbl">Audit Trail Coverage</div></div>
-</div>
 
 <!-- ABOUT -->
 <section class="about geo-bg" id="about">
@@ -658,80 +722,153 @@ footer::before{
     <div class="about-photos reveal">
       <div class="ap-main"></div>
       <div class="ap-secondary"></div>
-      <div class="ap-badge"><div class="ap-badge-n">5</div><div class="ap-badge-l">Asset<br>Classes</div></div>
+      <div class="ap-badge"><div class="ap-badge-n">3</div><div class="ap-badge-l">Investment<br>Pillars</div></div>
     </div>
     <div class="about-copy reveal">
-      <div class="overline">About Gona Capital</div>
-      <h2 class="display">Serving the people<br>behind the <em>portfolio.</em></h2>
+      <div class="overline">Who We Are</div>
+      <h2 class="display">Good at delivering<br><em>results.</em></h2>
       <div class="title-rule"></div>
       <div class="body-copy">
-        <p>Gona Capital Partners is a Zimbabwe-based asset management firm whose core mandate is the <strong style="color:var(--navy);font-weight:600">management and strategic investment of proprietary and client funds</strong>.</p>
-        <p>To enhance operational efficiency, transparency, and reporting accuracy, we replace manual, spreadsheet-driven workflows with secure, auditable, and scalable digital processes — giving every client consolidated reporting across all investment classes.</p>
+        <p>Gona Capital Partners is built around a single identity: <strong style="color:var(--navy);font-weight:600">results</strong>. Based in Harare under SECZ-aligned frameworks, we deploy capital across infrastructure, alternatives and listed markets — investing with conviction, not advising from the sidelines.</p>
+        <p>We serve institutional allocators, corporates and diaspora investors through disciplined portfolio management, advisory and research — originating opportunities, structuring capital and delivering durable, risk-adjusted returns.</p>
       </div>
-      <a href="#services" class="btn btn-slant">View Our Capabilities <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <ul class="about-points">
+        <li>
+          <strong>Portfolio</strong>
+          <span>Active deployment across listed and alternative markets.</span>
+        </li>
+        <li>
+          <strong>Advisory</strong>
+          <span>Capital packaging, SPV structuring and treasury strategy.</span>
+        </li>
+        <li>
+          <strong>Research</strong>
+          <span>Diligence and reporting through the full investment cycle.</span>
+        </li>
+      </ul>
+      <a href="#services" class="btn btn-slant">Investment Mandate <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features geo-bg" id="services">
+<!-- INVESTMENT MANDATE -->
+<section class="mandate-section geo-bg" id="services">
   <div class="section-hd reveal">
-    <h2 class="display">Tailored to your mandate,<br>designed to make a <em>difference.</em></h2>
+    <div class="overline" style="justify-content:center;margin-bottom:14px">Investment Mandate</div>
+    <h2 class="display">Product <em>architecture.</em></h2>
     <div class="title-rule"></div>
+    <p class="body-copy" style="max-width:720px;margin:18px auto 0">A diversified mandate across traditional, alternative and specialized strategies — organized to deliver durable, risk-adjusted returns.</p>
   </div>
-  <div class="feature-grid">
-    <article class="feature-card reveal">
-      <div class="feature-img-wrap">
-        <img class="feature-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=700&q=80&auto=format&fit=crop" alt="Portfolio analytics dashboard">
-        <a href="#contact" class="feature-arrow" aria-label="Learn more"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <h3 class="feature-title">Consolidated Reporting Across All Asset Classes</h3>
-    </article>
-    <article class="feature-card reveal d1">
-      <div class="feature-img-wrap">
-        <img class="feature-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=700&q=80&auto=format&fit=crop" alt="Client advisory meeting">
-        <a href="#contact" class="feature-arrow" aria-label="Learn more"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <h3 class="feature-title">Personalised Onboarding &amp; Close Client Communication</h3>
-    </article>
-    <article class="feature-card reveal d2">
-      <div class="feature-img-wrap">
-        <img class="feature-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=700&q=80&auto=format&fit=crop" alt="Compliance and governance">
-        <a href="#contact" class="feature-arrow" aria-label="Learn more"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-      <h3 class="feature-title">Maker-Checker Controls Are Core to Our Culture</h3>
-    </article>
+  <div class="mandate-tabs reveal" role="tablist">
+    <button class="mandate-tab active" role="tab" aria-selected="true" data-tab="traditional">Traditional Portfolios</button>
+    <button class="mandate-tab" role="tab" aria-selected="false" data-tab="alternative">Alternative Investments</button>
+    <button class="mandate-tab" role="tab" aria-selected="false" data-tab="specialized">Specialized Products</button>
+  </div>
+
+  <div class="mandate-panel active reveal" id="panel-traditional" role="tabpanel">
+    <p class="mandate-panel-intro">Active and thematic exposure across regional listed markets, fixed income and treasury strategies.</p>
+    <div class="mandate-cards">
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Listed Equities</h3><p>Active and thematic exposure across regional listed markets.</p></div>
+      </article>
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1559526324-593bc073d938?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Fixed Income</h3><p>Government, corporate and money-market instruments for stable yield.</p></div>
+      </article>
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Treasury Management</h3><p>Liquidity, FX and short-duration strategies for corporates and institutions.</p></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="mandate-panel reveal" id="panel-alternative" role="tabpanel">
+    <p class="mandate-panel-intro">High-alpha infrastructure and real assets underpinned by structural demand across Zimbabwe and the region.</p>
+    <div class="mandate-cards">
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Student &amp; Education Housing</h3><p>Purpose-built accommodation underpinned by structural demand.</p></div>
+      </article>
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Agri Logistics &amp; Storage</h3><p>Post-harvest infrastructure capturing value across the agri value chain.</p></div>
+      </article>
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Mining Support Infrastructure</h3><p>Enabling assets serving long-cycle resource operators.</p></div>
+      </article>
+    </div>
+  </div>
+
+  <div class="mandate-panel reveal" id="panel-specialized" role="tabpanel">
+    <p class="mandate-panel-intro">Mandate extensions for specialist allocators — bespoke structures and cross-border investment channels.</p>
+    <div class="mandate-cards cols-4">
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Future REITs</h3><p>Income-yielding real estate vehicles in development for institutional allocators.</p></div>
+      </article>
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Structured Solutions</h3><p>Bespoke credit, equity and hybrid structures aligned to investor mandates.</p></div>
+      </article>
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>China Desk</h3><p>Specialist advisory and portfolio services for Chinese investors deploying capital into Zimbabwe and the region.</p></div>
+      </article>
+      <article class="mandate-card">
+        <div class="mandate-card-img" style="background-image:url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80&auto=format&fit=crop')"></div>
+        <div class="mandate-card-body"><h3>Islamic Finance</h3><p>Shariah-compliant investment and structuring solutions, including Sukuk-style instruments and ethical asset mandates.</p></div>
+      </article>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:56px" class="reveal">
+    <a href="#contact" class="btn btn-slant">Partner with Us <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
-<!-- MODULES -->
-<section class="modules">
-  <div class="section-hd reveal" style="margin-bottom:40px">
-    <div class="overline" style="justify-content:center;margin-bottom:14px">Solution Modules</div>
-    <h2 class="display" style="font-size:clamp(28px,3vw,44px)">Four integrated modules.<br>One complete <em>platform.</em></h2>
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="section-hd reveal">
+    <div class="overline" style="justify-content:center;margin-bottom:14px">Leadership</div>
+    <h2 class="display">The team behind<br>the <em>mandate.</em></h2>
     <div class="title-rule"></div>
+    <p class="body-copy" style="max-width:560px;margin:18px auto 0">Experienced investment professionals committed to disciplined capital deployment and institutional-grade governance.</p>
   </div>
-  <div class="modules-grid reveal">
-    <div class="module-card">
-      <div class="module-num">01</div>
-      <div class="module-title">Client &amp; KYC Management</div>
-      <p class="module-body">Full client onboarding, KYC documentation, counterparty records, and a secure view-only client portal.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-num">02</div>
-      <div class="module-title">Portfolio &amp; Investment Management</div>
-      <p class="module-body">Multi-asset processing with double-entry bookkeeping, maker-checker approvals, and on-demand valuations.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-num">03</div>
-      <div class="module-title">Reporting &amp; Analytics</div>
-      <p class="module-body">Fund performance reports, audit trails, income summaries, and scheduled delivery via email — exportable to Excel or PDF.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-num">04</div>
-      <div class="module-title">User Management &amp; Administration</div>
-      <p class="module-body">Role-based access control, activity audit logs, 2FA, password policies, and backup management.</p>
-    </div>
+  <div class="team-grid reveal">
+    <article class="team-card">
+      <div class="team-photo"><span>GP</span></div>
+      <div class="team-body">
+        <div class="team-name">Managing Partner</div>
+        <div class="team-role">Executive Leadership</div>
+        <p class="team-bio">Sets firm strategy, oversees capital allocation and maintains relationships with institutional investors and key stakeholders.</p>
+      </div>
+    </article>
+    <article class="team-card">
+      <div class="team-photo"><span>HI</span></div>
+      <div class="team-body">
+        <div class="team-name">Head of Investments</div>
+        <div class="team-role">Portfolio Management</div>
+        <p class="team-bio">Leads origination, underwriting and portfolio construction across traditional and alternative asset classes.</p>
+      </div>
+    </article>
+    <article class="team-card">
+      <div class="team-photo"><span>HA</span></div>
+      <div class="team-body">
+        <div class="team-name">Head of Advisory</div>
+        <div class="team-role">Capital &amp; Structuring</div>
+        <p class="team-bio">Directs capital packaging, SPV structuring and treasury advisory for sponsors, corporates and institutions.</p>
+      </div>
+    </article>
+    <article class="team-card">
+      <div class="team-photo"><span>CC</span></div>
+      <div class="team-body">
+        <div class="team-name">Chief Compliance Officer</div>
+        <div class="team-role">Governance &amp; Risk</div>
+        <p class="team-bio">Ensures SECZ-aligned operations, investment committee governance and regulatory reporting across all mandates.</p>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -739,126 +876,98 @@ footer::before{
 <div class="process" id="process">
   <div class="process-photo"></div>
   <div class="process-panel reveal">
-    <div class="overline" style="margin-bottom:18px">How We Invest</div>
-    <h2 class="display light" style="margin-bottom:36px">A rigorous,<br><em>repeatable</em> process.</h2>
+    <div class="overline" style="margin-bottom:18px">Governance &amp; Risk</div>
+    <h2 class="display light" style="margin-bottom:36px">Fiduciary<br><em>excellence.</em></h2>
     <div class="fp-list">
       <div class="fp-item">
         <div class="fp-num">One</div>
-        <div><div class="fp-h">Mandate Definition</div><p class="fp-b">We deeply understand each client's objectives, risk tolerance, time horizon, and liquidity needs before committing any capital.</p></div>
+        <div><div class="fp-h">Investment Committee Process</div><p class="fp-b">Independent investment committee oversight on every allocation, with documented mandates and risk gates.</p></div>
       </div>
       <div class="fp-item">
         <div class="fp-num">Two</div>
-        <div><div class="fp-h">Research &amp; Origination</div><p class="fp-b">Fundamental analysis on every prospective investment — sector dynamics, financials, management quality, and macro context.</p></div>
+        <div><div class="fp-h">ESG Integration</div><p class="fp-b">Environmental, social and governance factors integrated across diligence, structuring and monitoring.</p></div>
       </div>
       <div class="fp-item">
         <div class="fp-num">Three</div>
-        <div><div class="fp-h">Committee Approval</div><p class="fp-b">All decisions pass a formal Investment Committee with maker-checker controls. No single person commits client capital alone.</p></div>
+        <div><div class="fp-h">Regulatory Compliance — SECZ</div><p class="fp-b">Operating within Securities and Exchange Commission of Zimbabwe frameworks with disciplined reporting cadence.</p></div>
       </div>
       <div class="fp-item">
         <div class="fp-num">Four</div>
-        <div><div class="fp-h">Execution &amp; Reporting</div><p class="fp-b">Capital deployed within strict diversification parameters. Continuous monitoring with transparent, scheduled reporting to all clients.</p></div>
+        <div><div class="fp-h">Transparent Reporting</div><p class="fp-b">Institutional-grade reporting with evidence-based decision trails and auditable structures.</p></div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- ASSET CLASSES -->
-<section class="assets geo-bg">
-  <div class="section-hd reveal">
-    <div class="overline" style="justify-content:center;margin-bottom:14px">Asset Classes</div>
-    <h2 class="display">Diversification across <em>five</em> core asset classes.</h2>
-    <div class="title-rule"></div>
-    <p class="body-copy" style="max-width:560px;margin:16px auto 0">Our portfolio engine supports stock market trading, money market instruments, bonds, property, and unit trust investments — with double-entry posting on every transaction.</p>
-  </div>
-  <div class="asset-grid reveal">
-    <div class="asset-col">
-      <div class="asset-img" style="background-image:url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=500&q=80&auto=format&fit=crop')"></div>
-      <div class="asset-body"><div class="asset-name">Equities</div><p class="asset-desc">Stock market and equity trading with research-driven entry and exit criteria across ZSE-listed and regional positions.</p></div>
-    </div>
-    <div class="asset-col">
-      <div class="asset-img" style="background-image:url('https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=500&q=80&auto=format&fit=crop')"></div>
-      <div class="asset-body"><div class="asset-name">Money Markets</div><p class="asset-desc">Short-duration instruments providing capital preservation and active liquidity management for every mandate.</p></div>
-    </div>
-    <div class="asset-col">
-      <div class="asset-img" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&q=80&auto=format&fit=crop')"></div>
-      <div class="asset-body"><div class="asset-name">Property</div><p class="asset-desc">Residential and commercial real estate delivering stable rental yields and long-term capital appreciation.</p></div>
-    </div>
-    <div class="asset-col">
-      <div class="asset-img" style="background-image:url('https://images.unsplash.com/photo-1559526324-593bc073d938?w=500&q=80&auto=format&fit=crop')"></div>
-      <div class="asset-body"><div class="asset-name">Bonds</div><p class="asset-desc">Government and corporate fixed-income instruments for predictable, stable income streams within your portfolio.</p></div>
-    </div>
-    <div class="asset-col">
-      <div class="asset-img" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=80&auto=format&fit=crop')"></div>
-      <div class="asset-body"><div class="asset-name">Unit Trusts</div><p class="asset-desc">Pooled investment vehicles offering broad diversification with professional fund oversight and performance tracking.</p></div>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:48px" class="reveal">
-    <a href="#contact" class="btn btn-slant">Discuss Your Portfolio <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-  </div>
-</section>
 
 <!-- PROMO BANNER -->
 <section class="promo reveal">
   <div class="promo-inner">
     <div class="promo-visual" role="img" aria-label="Investment analytics"></div>
     <div class="promo-copy">
-      <h2 class="display light">From manual spreadsheets to real-time reporting — you don't have to do it all.</h2>
-      <p>Learn how Gona Capital Partners automates fund performance calculations, portfolio valuations, and consolidated reporting across every asset class.</p>
-      <a href="#contact" class="btn btn-promo">Request a Briefing <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <h2 class="display light">Advisory services.<br><em>Capital packaging.</em></h2>
+      <p>We help sponsors and institutions translate ambition into investable, fundable structures — from concept to close.</p>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:12px;margin:0 0 28px;padding:0">
+        <li style="font-size:14px;color:rgba(255,255,255,.62);line-height:1.7"><strong style="color:var(--white);font-weight:600">Capital Raising</strong> — mandate-led fundraising across debt, equity and hybrid structures.</li>
+        <li style="font-size:14px;color:rgba(255,255,255,.62);line-height:1.7"><strong style="color:var(--white);font-weight:600">SPV Setup &amp; Structuring</strong> — ring-fenced vehicles for tax efficiency, governance and investor protection.</li>
+        <li style="font-size:14px;color:rgba(255,255,255,.62);line-height:1.7"><strong style="color:var(--white);font-weight:600">Treasury Strategy Advisory</strong> — liquidity, FX and balance-sheet optimisation in complex environments.</li>
+      </ul>
+      <a href="#contact" class="btn btn-promo">Engage Advisory <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- INSIGHTS -->
-<section class="insights geo-bg" id="insights">
-  <div class="insights-hd reveal">
-    <h2 class="display">Latest Insights</h2>
+<!-- DIGITAL ADVANTAGE -->
+<section class="digital-section geo-bg" id="insights">
+  <div class="section-hd reveal">
+    <div class="overline" style="justify-content:center;margin-bottom:14px">How We Invest</div>
+    <h2 class="display">Disciplined execution,<br><em>full transparency.</em></h2>
     <div class="title-rule"></div>
-    <p class="body-copy">Investment intelligence and operational guidance from our asset management team.</p>
+    <p class="body-copy" style="max-width:720px;margin:18px auto 0">Technology supports our investment process — rigorous research, live reporting and complete visibility for every allocation we make on behalf of clients and proprietary capital.</p>
   </div>
-  <div class="blog-grid">
-    <article class="blog-card reveal">
-      <div class="blog-img-wrap">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1642790106117-e829e14a795f?w=600&q=80&auto=format&fit=crop" alt="Fund performance">
-        <div class="blog-date-tab"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>04 May 2026</div>
-        <a href="#" class="blog-arrow" aria-label="Read article"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <div class="digital-inner reveal">
+    <div class="digital-features">
+      <div class="digital-feat">
+        <h3>Real-Time Portfolio Reporting</h3>
+        <p>Investors see exposure, performance and attribution as positions change — not months later in a static quarterly statement.</p>
       </div>
-      <div class="blog-body">
-        <h3 class="blog-title">Understanding Fund Performance Calculations &amp; Portfolio Valuations</h3>
-        <p class="blog-excerpt">How NAV, IRR, and time-weighted returns are calculated — and why automation eliminates human error in every valuation cycle.</p>
+      <div class="digital-feat">
+        <h3>AI-Assisted Research</h3>
+        <p>Machine-augmented diligence and macro screening support our team's origination and underwriting of every investment.</p>
       </div>
-    </article>
-    <article class="blog-card reveal d1">
-      <div class="blog-img-wrap">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80&auto=format&fit=crop" alt="Asset allocation">
-        <div class="blog-date-tab"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>22 April 2026</div>
-        <a href="#" class="blog-arrow" aria-label="Read article"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <div class="digital-feat">
+        <h3>Full Line-of-Sight</h3>
+        <p>Every position, fee and capital flow is auditable on demand — the transparency institutional allocators expect from a committed investor.</p>
       </div>
-      <div class="blog-body">
-        <h3 class="blog-title">Managing a Diversified Portfolio Across Five Asset Classes</h3>
-        <p class="blog-excerpt">How proper allocation across equities, bonds, money markets, property, and unit trusts reduces risk and enhances risk-adjusted returns.</p>
+    </div>
+    <div class="dash-panel" aria-label="Portfolio dashboard preview">
+      <div class="dash-label">Portfolio NAV</div>
+      <div class="dash-nav">$ 24.81M</div>
+      <div class="dash-ytd">+12.4% YTD</div>
+
+      <div class="dash-alloc">
+        <div class="dash-row"><span>Equities</span><strong>42%</strong></div>
+        <div class="dash-bar"><i class="eq"></i></div>
+        <div class="dash-row"><span>Alts</span><strong>38%</strong></div>
+        <div class="dash-bar"><i class="alt"></i></div>
+        <div class="dash-row"><span>Fixed Inc.</span><strong>20%</strong></div>
+        <div class="dash-bar"><i class="fi"></i></div>
       </div>
-    </article>
-    <article class="blog-card reveal d2">
-      <div class="blog-img-wrap">
-        <img class="blog-img" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&q=80&auto=format&fit=crop" alt="Governance">
-        <div class="blog-date-tab"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>10 April 2026</div>
-        <a href="#" class="blog-arrow" aria-label="Read article"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+      <div class="dash-exposure">
+        <div class="dash-exp"><strong>78%</strong><span>Listed Equities</span></div>
+        <div class="dash-exp"><strong>64%</strong><span>Alternatives</span></div>
+        <div class="dash-exp"><strong>41%</strong><span>Treasury</span></div>
       </div>
-      <div class="blog-body">
-        <h3 class="blog-title">Why Maker-Checker Controls Are Essential in Investment Operations</h3>
-        <p class="blog-excerpt">The case for four-eyes principles in fund management — preventing errors, detecting fraud, and building client confidence through audit trails.</p>
-      </div>
-    </article>
+    </div>
   </div>
 </section>
 
 <!-- PRE-FOOTER CTA -->
 <section class="pre-footer geo-bg">
   <div class="pre-footer-inner reveal">
-    <h2 class="display">How much would a disciplined, repeatable approach benefit your portfolio?</h2>
-    <p class="subtitle">Find out with an investment mandate consultation</p>
-    <a href="#contact" class="btn btn-slant">Schedule a Consultation <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <h2 class="display">Ready to deploy capital<br>with <em>discipline</em>?</h2>
+    <p class="subtitle">Tell us your mandate or interest — we’ll respond confidentially.</p>
+    <a href="#contact" class="btn btn-slant">Partner with Us <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
@@ -866,49 +975,50 @@ footer::before{
 <section class="contact" id="contact">
   <div class="contact-inner">
     <div class="contact-left reveal">
-      <div class="overline" style="margin-bottom:18px">Get In Touch</div>
-      <h2 class="display light" style="margin-bottom:20px">Ready to discuss<br>your <em>mandate?</em></h2>
-      <p>Whether you are an institutional investor, a high-net-worth individual, or a family office seeking disciplined asset management — we would like to hear from you. All enquiries are treated with absolute confidentiality.</p>
+      <div class="overline" style="margin-bottom:18px">Contact</div>
+      <h2 class="display light" style="margin-bottom:20px">Partner with<br>Gona <em>Capital.</em></h2>
+      <p>We work with institutional allocators, corporates and diaspora investors — partnering on capital deployment into Zimbabwean and regional opportunities.</p>
       <div class="contact-details">
         <div class="cd-item">
           <div class="cd-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="cd-label">Location</div><div class="cd-val">Harare, Zimbabwe</div></div>
+          <div><div class="cd-label">Location</div><div class="cd-val">1 Ardmore Close, Greendale, Harare, Zimbabwe</div></div>
         </div>
         <div class="cd-item">
           <div class="cd-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
-          <div><div class="cd-label">Email</div><div class="cd-val">admin@gonacapitalpartners.com</div></div>
+          <div><div class="cd-label">Email</div><div class="cd-val">info@gonacapitalpartners.com</div></div>
         </div>
         <div class="cd-item">
           <div class="cd-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 12 19.79 19.79 0 0 1 1.14 3.32 2 2 0 0 1 3.11 1.1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 15.92z"/></svg></div>
-          <div><div class="cd-label">Phone</div><div class="cd-val">+263 (0) 78 000 0000</div></div>
+          <div><div class="cd-label">Phone</div><div class="cd-val">+263 (0) 000 0000</div></div>
         </div>
       </div>
     </div>
     <div class="reveal d1">
       <div class="contact-form">
-        <div class="cf-title">Schedule a Consultation</div>
+        <div class="cf-title">Send Inquiry</div>
         <div class="form-row">
-          <div class="fg" style="margin-bottom:0"><label class="flabel">First Name</label><input type="text" class="finput" placeholder="John"></div>
-          <div class="fg" style="margin-bottom:0"><label class="flabel">Last Name</label><input type="text" class="finput" placeholder="Doe"></div>
+          <div class="fg" style="margin-bottom:0"><label class="flabel">Full name</label><input type="text" class="finput" placeholder="Jane Doe"></div>
+          <div class="fg" style="margin-bottom:0"><label class="flabel">Email</label><input type="text" class="finput" placeholder="jane@institution.com"></div>
         </div>
-        <div class="fg"><label class="flabel">Email Address</label><input type="email" class="finput" placeholder="john@company.com"></div>
+        <div class="fg"><label class="flabel">Organization</label><input type="text" class="finput" placeholder="Organization"></div>
         <div class="fg">
           <label class="flabel">Investor Type</label>
           <select class="fselect">
             <option value="" disabled selected>Select investor type</option>
-            <option>Individual / High-Net-Worth</option>
-            <option>Family Office</option>
-            <option>Institutional Investor</option>
-            <option>Corporate / Pension Fund</option>
-            <option>Other</option>
+            <option>Institutional</option>
+            <option>Corporate</option>
+            <option>Diaspora</option>
+            <option>China Desk</option>
+            <option>Islamic Finance</option>
           </select>
         </div>
-        <div class="fg"><label class="flabel">Message</label><textarea class="ftextarea" placeholder="Tell us about your investment objectives..."></textarea></div>
+        <div class="fg"><label class="flabel">Message</label><textarea class="ftextarea" placeholder="Tell us about your mandate or interest..."></textarea></div>
         <button class="btn btn-gold" style="width:100%;justify-content:center;border:none;cursor:pointer"
           onclick="this.textContent='Enquiry received — we\'ll be in touch.';this.style.background='#1A5C3A'">
-          Submit Enquiry
+          Send Inquiry
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7.5 2.5l4.5 4.5-4.5 4.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
+        <div style="margin-top:12px;font-size:11px;color:rgba(255,255,255,.4);line-height:1.6">By submitting, you consent to be contacted regarding your inquiry.</div>
       </div>
     </div>
   </div>
@@ -921,10 +1031,10 @@ footer::before{
       <div>
         <div class="footer-brand">
           <div class="footer-logo-wrap">
-            <img src="logo2.png" alt="Gona Capital Partners Asset Management" class="footer-logo">
+            <img src="logo-gona.png" alt="Gona Capital Partners" class="footer-logo">
           </div>
         </div>
-        <p class="footer-tagline">A purpose-built asset management platform automating and centralising investment operations — secure, auditable, and scalable for growth in AUM and team size.</p>
+        <p class="footer-tagline">Results-driven investing — bridging institutional capital with high-alpha infrastructure and specialist alternatives across Zimbabwe and the region.</p>
         <div class="footer-socials">
           <a href="#" class="fsoc" aria-label="LinkedIn">in</a>
           <a href="#" class="fsoc" aria-label="Twitter">X</a>
@@ -935,20 +1045,21 @@ footer::before{
         <div class="fcol-title">Navigation</div>
         <ul>
           <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">Our Process</a></li>
+          <li><a href="#services">Mandate</a></li>
+          <li><a href="#contact">Advisory</a></li>
+          <li><a href="#process">Governance</a></li>
           <li><a href="#insights">Insights</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="fcol">
         <div class="fcol-title">Quick Links</div>
         <ul>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#">Client Portal</a></li>
-          <li><a href="#">KYC Documentation</a></li>
-          <li><a href="#">Investment Mandates</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#contact">Engage Advisory</a></li>
+          <li><a href="#insights">How We Invest</a></li>
+          <li><a href="#process">Governance &amp; Risk</a></li>
+          <li><a href="#contact">Send Inquiry</a></li>
         </ul>
       </div>
       <div class="fcol">
@@ -963,10 +1074,14 @@ footer::before{
         </div>
         <div class="footer-ci">
           <div class="footer-ci-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></div>
-          <a href="mailto:admin@gonacapitalpartners.com">admin@gonacapitalpartners.com</a>
+          <a href="mailto:info@gonacapitalpartners.com">info@gonacapitalpartners.com</a>
         </div>
       </div>
     </div>
+  </div>
+  <div class="footer-disclaimer">
+    <h4>Important Disclaimer</h4>
+    <p>Gona Capital Partners provides investment, asset management and advisory services within the regulatory frameworks of the Securities and Exchange Commission of Zimbabwe (SECZ). Information on this website is for general informational purposes only and does not constitute investment advice, an offer to sell, or a solicitation to buy any financial instrument. Past performance is not indicative of future results. All investments carry risk, including possible loss of principal. Forward-looking statements reflect current views and are subject to change without notice.</p>
   </div>
   <div class="footer-bar">
     <p class="footer-bar-copy">© 2026 Gona Capital Partners. All Rights Reserved. Harare, Zimbabwe.</p>
@@ -1008,31 +1123,18 @@ const ro=new IntersectionObserver(es=>{
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-function cnt(id,target,dur){
-  const el=document.getElementById(id);if(!el)return;
-  let v=0,step=target/(dur/16);
-  const t=setInterval(()=>{v+=step;if(v>=target){el.textContent=target;clearInterval(t)}else el.textContent=Math.floor(v)},16);
-}
-
-const bo=new IntersectionObserver(es=>{
-  es.forEach(e=>{
-    if(e.isIntersecting){
-      cnt('t1',5,700);cnt('t2',4,700);cnt('t3',4,700);cnt('t4',100,900);
-      bo.disconnect();
-    }
+document.querySelectorAll('.mandate-tab').forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    const target=tab.dataset.tab;
+    document.querySelectorAll('.mandate-tab').forEach(t=>{
+      t.classList.toggle('active',t===tab);
+      t.setAttribute('aria-selected',t===tab?'true':'false');
+    });
+    document.querySelectorAll('.mandate-panel').forEach(p=>{
+      p.classList.toggle('active',p.id==='panel-'+target);
+    });
   });
-},{threshold:0.3});
-const sb=document.querySelector('.stats-band');if(sb)bo.observe(sb);
-
-const ho=new IntersectionObserver(es=>{
-  es.forEach(e=>{
-    if(e.isIntersecting){
-      cnt('h1',5,700);cnt('h2',4,700);cnt('h3',100,900);
-      ho.disconnect();
-    }
-  });
-},{threshold:0.3});
-const hi=document.querySelector('.hero-metrics');if(hi)ho.observe(hi);
+});
 </script>
 </body>
 </html>
